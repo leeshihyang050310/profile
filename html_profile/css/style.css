@@ -1,0 +1,54 @@
+body {
+    -ms-user-select: none; 
+    -moz-user-select: -moz-none; 
+    -webkit-user-select: none; 
+    -khtml-user-select: none; 
+    user-select: none;
+}
+#wrap {
+    padding:0;
+    font-family: 'Nanum Gothic', sans-serif;
+    height: 100%;
+}
+
+.contents {
+    width: 100vh;
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    overflow: hidden;
+}
+.outer { 
+    margin: 0 auto;
+    overflow-x: hidden;
+}
+
+.swiper-slide > div {
+    background-size: 100% 100%;
+    width: 100vh;
+    height: 100vh;
+}
+.img01 {
+    background: url(../img/img01.jpg) no-repeat;
+}
+.img02 {
+    background: url(../img/img02.png) no-repeat;
+}
+.img03 {
+    background: url(../img/img03.png) no-repeat;
+}
+.img04 {
+    background: url(../img/img04.png) no-repeat;
+}
+.img05 {
+    background: url(../img/img05.png) no-repeat;
+}
+.img06 {
+    background: url(../img/img06.png) no-repeat;
+}
+.img07 {
+    background: url(../img/img07.png) no-repeat;
+}
+.img08 {
+    background: url(../img/img08.png) no-repeat;
+}
