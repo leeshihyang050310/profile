@@ -1,0 +1,1357 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="./css/sample.css"/>
+    <script  src="http://code.jquery.com/jquery-latest.min.js"></script>
+
+</head>
+<body id="wrap">
+    <h4>스마트문화앱콘텐츠제작</h4>
+    <hr>
+    <h2>CSS 기본요소</h2>
+
+    <div class="group">
+        <h3>CSS 링크</h3>
+        <hr>
+
+        <style>
+            a.link {
+                background-color: #FFFFE0;
+                color: darkslategray ;
+                font-size: 1.3em;
+                text-decoration: none;
+            }
+        </style>
+        <h4>링크의 스타일 설정</h4>
+	    <p><a href="/index.php" target="_blank" class="link">홈으로 가기!</a></p>
+        <hr>
+
+        <style>
+            a.linkHover:link { color: olive; }
+            a.linkHover:visited { color: brown; }
+            a.linkHover:hover { color: coral; }
+            a.linkHover:active { color: khaki; }
+        </style>
+        <h4>링크의 상태에 따른 스타일 설정</h4>
+	    <p><a href="/index.php" target="_blank" class="linkHover">홈으로 가기!</a></p>
+        <hr>
+
+        <style>
+            a.btn:link, a:visited {
+                background-color: #FFA500;
+                color: maroon;
+                padding: 15px 25px;
+                text-align: center;	
+                text-decoration: none;
+                display: inline-block;
+            }
+            a.btn:hover, a:active { background-color: #FF4500; }
+        </style>
+        <h4>링크를 활용한 버튼</h4>
+	    <p><a href="/index.php" target="_blank" class="btn">홈으로 가기!</a></p>
+        <hr>
+
+        <h3>리스트</h3>
+        <hr>
+        <style>
+            .circle { list-style-type: circle; }
+            .square { list-style-type: square; }
+            .upperAlpha { list-style-type: upper-alpha; }
+            .lowerRoman { list-style-type: lower-roman; }
+        </style>
+        <h1>list-style-type 속성을 이용한 마커의 변경</h1>
+
+        <ul class="circle">
+            <li>사과</li>
+            <li>멜론</li>
+            <li>바나나</li>
+        </ul>
+    
+        <ul class="square">
+            <li>수박</li>
+            <li>참외</li>
+            <li>옥수수</li>
+        </ul>
+    
+        <ol class="upperAlpha">
+            <li>감자</li>
+            <li>상추</li>
+            <li>고구마</li>
+        </ol>
+    
+        <ol class="lowerRoman">
+            <li>오이</li>
+            <li>배추</li>
+            <li>시금치</li>
+        </ol>
+        <hr>
+
+        <style>
+            .imageMarker { list-style-image: url("./img/img_list_marker.png"); }
+        </style>
+        <h1>list-style-image 속성을 이용한 마커의 변경</h1>
+
+        <ul class="imageMarker">
+            <li>사과</li>
+            <li>멜론</li>
+            <li>바나나</li>
+        </ul>
+    </div>
+
+    <div class="group">
+        <h3>Form요소</h3>
+        <hr>
+
+        <style>
+            input.inputBox {
+                width: 100%;
+                padding: 10px 20px;
+                margin: 5px 0;
+                box-sizing: border-box;
+            }
+        </style>
+        <h4>input 요소의 크기 설정</h4>
+        <form>
+            사용자 : <br>
+            <input type="text" name="username" class="inputBox"><br>
+            비밀번호 : <br>
+            <input type="password" name="password" class="inputBox">
+        </form>
+        <hr>
+
+        <style>
+            input.inputBoxOutline {
+                width: 100%;
+                padding: 10px 20px;
+                margin: 5px 0;
+                box-sizing: border-box;
+            }
+            input.inputBoxOutline[type="text"] {
+                border: solid 2px #D2691E;
+                border-radius: 8px;
+            }
+            input.inputBoxOutline[type="password"] {
+                border: none;
+                border-bottom: solid 2px #D2691E;
+            }
+        </style>
+        <h4>input 요소에 테두리 적용</h4>
+        <form>
+            사용자 : <br>
+            <input type="text" name="username" class="inputBoxOutline"><br>
+            비밀번호 : <br>
+            <input type="password" name="password" class="inputBoxOutline">
+        </form>
+        <hr>
+
+        <style>
+            input.inputBoxBg {
+                width: 100%;
+                padding: 10px 20px;
+                margin: 5px 0;
+                box-sizing: border-box;
+                border: none;
+                background-color: #FFF8DC;
+                color: olive;
+            }
+        </style>
+        <h4>input 요소에 배경색 적용</h4>
+        <form>
+            사용자 : <br>
+            <input type="text" name="username" class="inputBoxBg"><br>
+            비밀번호 : <br>
+            <input type="password" name="password" class="inputBoxBg">
+        </form>
+        <hr>
+
+        <style>
+            input.inputBoxPointer {
+                width: 100%;
+                padding: 10px 20px;
+                margin: 5px 0;
+                box-sizing: border-box;
+            }
+            input.inputBoxPointer[type="text"] {
+                border: solid 2px #FFE4B5;
+                -webkit-transition: 0.5s;
+                transition: 0.5s;
+                outline: none;
+            }
+            input.inputBoxPointer[type="text"]:focus { border: solid 2px #D2691E; }
+            input.inputBoxPointer[type="password"] { border: solid 1px black; }
+            input.inputBoxPointer[type="password"]:focus { background-color: #E0FFFF; }
+        </style>
+        <h4>포커스가 있는 input 요소의 스타일 설정</h4>
+        <form>
+            사용자 : <br>
+            <input type="text" name="username" class="inputBoxPointer"><br>
+            비밀번호 : <br>
+            <input type="password" name="password" class="inputBoxPointer">
+        </form>
+        <hr>
+
+        <style>
+            input.inputBoxIcon {
+                width: 100%;
+                padding: 10px 40px;
+                margin: 5px 0;
+                box-sizing: border-box;
+                border: solid 2px #483D8B;
+                border-radius: 5px;
+                font-size: 14px;
+                background-image: url("./img/img_search_icon.png");
+                background-size: 2em;
+                background-position: 5px 4px;
+                background-repeat: no-repeat;
+            }
+        </style>
+        <h1>input 요소에 아이콘이나 이미지 삽입</h1>
+        <form>
+            검색할 키워드를 입력하세요 : <br>
+            <input type="text" name="search" class="inputBoxIcon"><br>
+        </form>
+    </div>
+
+    <div class="group">
+        <h3>툴팁 효과</h3>
+        <style>
+            .tooltip {
+                position: relative;
+                display: inline-block;
+            }
+            .tooltip .tooltip-content {
+                visibility: hidden;
+                width: 300px;
+                background-color: orange;
+                padding: 0;
+                margin-top: 10px;
+                color: white;
+                text-align: center;
+                position: absolute;
+                z-index: 1;
+            }
+            .tooltip:hover .tooltip-content { visibility: visible; }
+        </style>
+        <div class="tooltip">
+            <span>여기에 마우스를 올려보세요!</span>
+            <div class="tooltip-content">
+                <p>마우스를 올려야 나타나는 툴팁입니다!</p>
+            </div>
+        </div>
+        <hr>
+
+    </div>
+    
+    <div class="group">
+        
+        <h3>단위</h3>
+        <hr>
+        <style>
+            #large { font-size: 200%; }
+            #small { font-size: 0.7em; }
+            #fixed { font-size: 20px; }
+        </style>
+        <h4>CSS에서의 크기 단위입니다.</h4>
+        <p id="large">글꼴의 크기를 200% 으로 변경합니다.</p>
+        <p>글꼴의 기본 크기인 100% 입니다.</p>
+        <p id="small">글꼴의 크기를 0.7em 으로 변경합니다.</p>
+        <p id="fixed">글꼴의 크기를 20px 로 변경합니다.</p>
+        <P>=>  1배 = 1em = 100%를 의미합니다.</P>
+    
+    </div>
+
+    <div class="group">
+        <h3>드롭다운메뉴</h3>
+        <hr>
+        <style>
+            .dropdown-button {
+                background-color: #FFDAB9;
+                padding: 8px;
+                font-size: 15px;
+                border: none;
+            }
+            .dropdown {
+                position: relative;
+                display: inline-block;
+            }
+            .dropdown-content {
+                display: none;
+                position: absolute;
+                background-color: #FFDAB9;
+                min-width: 75px;
+                padding: 5px;
+                box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            }
+            .dropdown-content a {
+                color: black;
+                padding: 8px;
+                text-decoration: none;
+                display: block;
+            }
+            .dropdown-content a:hover { background-color: #CD853F; }
+            .dropdown:hover .dropdown-content { display: block; }
+            .dropdown:hover .dropdown-button { background-color: #CD853F; }
+        </style>
+        <div class="dropdown">
+            <button class="dropdown-button">Dropdown</button>
+            <div class="dropdown-content">
+                <a href="#">HTML</a>
+                <a href="#">CSS</a>
+                <a href="#">JAVA</a>
+                <a href="#">C++</a>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="group">
+        <h3>네비게이션</h3>
+        <hr>
+
+        <style>
+            ul.linkmenu {
+                list-style-type: none;
+                margin: 0;
+                padding: 0;
+            }
+        </style>
+        <h4>링크를 사용한 리스트 메뉴</h4>
+        <ul class="linkmenu">
+            <li><a href="/index.php">Home</a></li>
+            <li><a href="/html/intro">HTML</a></li>
+            <li><a href="/css/intro">CSS</a></li>
+            <li><a href="/javascript/intro">자바스크립트</a></li>
+        </ul>
+        <hr>
+
+        <style>
+            ul.vNaviText {
+                background-color: #FFDAB9;
+                width: 150px;
+                list-style-type: none;
+                margin: 0;
+                padding: 0;
+            }
+            .vNaviText li a {
+                display: block;
+                color: #000000;
+                padding: 8px;
+                text-decoration: none;
+                font-weight: bold;
+            }
+            .vNaviText li a:hover {
+                background-color: #CD853F;
+                color: white;
+            }
+        </style>
+        <h4>수직 내비게이션 바</h4>
+        <ul class="vNaviText">
+            <li><a href="/index.php">Home</a></li>
+            <li><a href="/html/intro">HTML</a></li>
+            <li><a href="/css/intro">CSS</a></li>
+            <li><a href="/javascript/intro">자바스크립트</a></li>
+        </ul>
+        <hr>
+
+        <style>
+            ul.vNaviSelect {
+                background-color: #FFDAB9;
+                width: 150px;
+                list-style-type: none;
+                margin: 0;
+                padding: 0;
+            }
+            .vNaviSelect li a {
+                display: block;
+                color: #000000;
+                padding: 8px;
+                text-align: center;
+                text-decoration: none;
+                font-weight: bold;
+            }
+            .vNaviSelect li a.current {
+                background-color: #FF6347;
+                color: white;
+            }
+            .vNaviSelect li a:hover:not(.current) {
+                background-color: #CD853F;
+                color: white;
+            }
+        </style>
+        <h4>현재 메뉴의 위치 표시</h4>
+        <ul class="vNaviSelect">
+            <li><a href="/index.php">Home</a></li>
+            <li><a class="current" href="/html/intro">HTML</a></li>
+            <li><a href="/css/intro">CSS</a></li>
+            <li><a href="/javascript/intro">자바스크립트</a></li>
+        </ul>
+        <hr>
+
+        <style>
+            ul.hNaviText {
+                list-style-type: none;
+                margin: 0;
+                padding: 0;
+            }
+            .hNaviText li { display: inline; }
+        </style>
+        <h4>display 속성을 이용한 수평 내비게이션 바</h4>
+        <ul class="hNaviText">
+            <li><a href="/index.php">Home</a></li>
+            <li><a href="/html/intro">HTML</a></li>
+            <li><a href="/css/intro">CSS</a></li>
+            <li><a href="/bbs/login.php">로그인</a></li>
+            <li><a href="/bbs/register_form.php">회원가입</a></li>
+        </ul>
+        <hr>
+
+        <style>
+            ul.floatNavi {
+                list-style-type: none;
+                margin: 0;
+                padding: 0;
+                overflow:auto;
+
+            }
+            .floatNavi li { float: left; }
+            .floatNavi li a {
+                display: block;
+                background-color: #FFDAB9;
+                padding: 8px;
+            }
+        </style>
+        <h4>floating 속성을 이용한 수평 내비게이션 바</h4>
+        <ul class="floatNavi">
+            <li><a href="/index.php">Home</a></li>
+            <li><a href="/html/intro">HTML</a></li>
+            <li><a href="/css/intro">CSS</a></li>
+            <li><a href="/bbs/login.php">로그인</a></li>
+            <li><a href="/bbs/register_form.php">회원가입</a></li>
+        </ul>
+        <hr>
+
+        <style>
+            ul.hNavi {
+                background-color: #FFDAB9;
+                list-style-type: none;
+                margin: 0;
+                padding: 0;
+                overflow: hidden;
+            }
+            .hNavi li { float: left; }
+            .hNavi li a {
+                display: block;
+                background-color: #FFDAB9;
+                color: #000000;
+                padding: 8px;
+                text-decoration: none;
+                text-align: center;
+                font-weight: bold;
+            }
+            .hNavi li a:hover {
+                background-color: #CD853F;
+                color: white;
+            }
+        </style>
+        <h4>수평 내비게이션 바</h4>
+        <ul class="hNavi">
+            <li><a href="/index.php">Home</a></li>
+            <li><a href="/html/intro">HTML</a></li>
+            <li><a href="/css/intro">CSS</a></li>
+            <li><a href="/bbs/login.php">로그인</a></li>
+            <li><a href="/bbs/register_form.php">회원가입</a></li>
+        </ul>
+        <hr>
+
+        <style>
+            ul.hNaviSelect {
+                background-color: #FFDAB9;
+                list-style-type: none;
+                margin: 0;
+                padding: 0;
+                overflow: hidden;
+            }
+            .hNaviSelect li { float: left; }
+            .hNaviSelect li a {
+                display: block;
+                background-color: #FFDAB9;
+                color: #000000;
+                padding: 8px;
+                text-decoration: none;
+                text-align: center;
+                font-weight: bold;
+            }
+            .hNaviSelect li a.current {
+                background-color: #FF6347;
+                color: white;
+            }
+            .hNaviSelect li a:hover:not(.current) {
+                background-color: #CD853F;
+                color: white;
+            }
+        </style>
+        <h4>현재 메뉴의 위치 표시</h4>
+        <ul class="hNaviSelect">
+            <li><a href="/index.php">Home</a></li>
+            <li><a href="/html/intro">HTML</a></li>
+            <li><a class="current" href="/css/intro">CSS</a></li>
+            <li><a href="/bbs/login.php">로그인</a></li>
+            <li><a href="/bbs/register_form.php">회원가입</a></li>
+        </ul>
+        <hr>
+
+        <style>
+            ul.hNaviAlgin {
+                background-color: #FFDAB9;
+                list-style-type: none;
+                margin: 0;
+                padding: 0;
+                overflow: hidden;
+            }
+            .hNaviAlgin li { float: left; }
+            .hNaviAlgin li a {
+                display: block;
+                background-color: #FFDAB9;
+                color: #000000;
+                padding: 8px;
+                text-decoration: none;
+                text-align: center;
+                font-weight: bold;
+            }
+            .hNaviAlgin li a.current {
+                background-color: #FF6347;
+                color: white;
+            }
+            .hNaviAlgin li a:hover:not(.current) {
+                background-color: #CD853F;
+                color: white;
+            }
+        </style>
+        <h4>오른쪽 메뉴 설정</h4>
+        <ul class="hNaviAlgin">
+            <li><a href="/index.php">Home</a></li>
+            <li><a href="/html/intro">HTML</a></li>
+            <li><a class="current" href="/css/intro">CSS</a></li>
+            <ul style="float:right; list-style-type:none;">
+                <li><a href="/bbs/login.php">로그인</a></li>
+                <li><a href="/bbs/register_form.php">회원가입</a></li>
+            </ul>
+        </ul>
+
+    </div>
+
+    <div class="group">
+        <h3>크기</h3>
+        <hr>
+        <style>
+            div.size {
+                height: 200px;
+                width: 500px;
+                border: 2px solid lightsalmon;
+            }
+        </style>
+        <h4>height와 width 속성</h4>
+	    <div class="size">이 div 요소의 높이는 200px이고 너비는 500px입니다.</div>
+        <hr>
+
+        <style>
+            div.width {
+                width: 500px;
+                border: 2px solid #DAA520;
+            }
+            div.maxWidth {
+                max-width: 500px;
+                border: 2px solid #CD5C5C;
+            }
+        </style>
+        <h4>max-width 속성</h4>
+        <div class="width">이 div 요소는 width 속성을 500px로 설정했습니다.</div><br>
+        <div class="maxWidth">이 div 요소는 max-width 속성을 500px로 설정했습니다.</div>
+        <p>웹 브라우저의 크기를 줄여서 두 div 요소의 차이를 알아보세요!</p>
+        <hr>
+
+        <style>
+            div.width {
+                width: 500px;
+                border: 2px solid #DAA520;
+            }
+            div.minWidth {
+                min-width: 500px;
+                border: 2px solid #CD5C5C;
+            }
+        </style>
+        <h4>min-width 속성</h4>
+        <div class="width">이 div 요소는 width 속성을 500px로 설정했습니다.</div><br>
+        <div class="minWidth">이 div 요소는 min-width 속성을 500px로 설정했습니다.</div>
+        <p>웹 브라우저의 크기를 줄여서 두 div 요소의 차이를 알아보세요!</p>
+        <hr>
+
+        <style>
+            p.maxHeight {
+                max-height: 50px;
+                background-color: greenyellow;
+                overflow: auto;
+            }
+        </style>
+        <h4>max-height 속성</h4>
+        <p class="maxHeight">이 div 요소는 max-height 속성을 50px로 설정했습니다.<br>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam quis ligula non ligula iaculis semper at vitae ante. Sed condimentum viverra sollicitudin. Phasellus sodales ipsum nec nulla luctus, in luctus ipsum vestibulum. Pellentesque vehicula lectus a ex tincidunt, eget pellentesque nisl posuere. Vestibulum sed purus sapien. Aenean consequat urna sit amet quam pulvinar, in interdum augue volutpat. Donec ex leo, feugiat vel lorem non, blandit venenatis elit. Vestibulum eu erat eget ante consequat iaculis.
+        </p>
+        <hr>
+
+        <style>
+            p.minHeight {
+                min-height: 100px;
+                background-color: greenyellow;
+            }
+        </style>
+        <h4>min-height 속성</h4>
+        <p class="minHeight">이 div 요소는 min-height 속성을 100px로 설정했습니다.</p>
+    </div> 
+    
+    <div class="group">
+        <h3>CSS 박스 모델</h3>
+        <hr>
+        <style>
+            div.box {
+                background-color: red;
+                color: white;
+                width: 400px;
+                padding: 50px;
+                border: 20px solid maroon;
+                margin: 50px;
+            }
+        </style>
+        <h4>CSS 박스 모델</h4>
+        <div class="box">CSS 박스 모델입니다.<br><br>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus lobortis nibh eu finibus posuere. Duis vehicula ipsum quis purus eleifend mollis. Mauris ut tincidunt felis. Donec commodo justo elit. Praesent eget erat leo. Fusce vitae metus molestie, cursus lorem ullamcorper, fringilla erat. Vivamus turpis massa, dictum vitae ligula ut, eleifend iaculis nunc. In hac habitasse platea dictumst. Fusce eleifend tellus vulputate convallis cursus.
+        </div>
+        <hr>
+
+        <h4>height와 width 속성의 이해</h4>
+        <style>
+            div.boxcount {
+                width: 320px;
+                padding: 10px;
+                border: 5px solid maroon;
+                margin: 0;
+            }
+        </style>
+        <img src="./img/img_flower.png" width="350" height="263" alt="flower">
+        <div class="boxcount">
+            위 이미지의 너비는 350px입니다.<br>
+            이 div 요소의 width 속성값은 320px입니다.<br>
+            하지만 좌우 패딩(padding)이 10px로 설정되어 있습니다.<br>
+            또한, 좌우 테두리(border)의 너비가 5px로 설정되어 있습니다.<br>
+            따라서 이 div 요소의 전체 너비는 320px + 10px + 10px + 5px + 5px = 350px이 됩니다.
+        </div>
+        <hr>
+
+        <h4>패딩(padding) 속성</h4>
+        <style>
+            div.basic {
+                background-color: #7FFFD4;
+                border: 2px solid teal;
+            }
+            div.pad {
+                background-color: #7FFFD4;
+                border: 2px solid teal;
+                padding-top: 50px;
+                padding-right: 10px;
+                padding-bottom: 30px;
+                padding-left: 100px;
+            }
+        </style>
+        <div class="basic">padding 속성을 설정하지 않은 요소입니다.</div><br>
+        <div class="pad">padding 속성값을 방향별로 따로 설정한 요소입니다.</div>
+        <hr>
+
+        <h4>패딩 축약 표현(padding shorthand)</h4>
+        <style>
+            div.basic {
+                background-color: #7FFFD4;
+                border: 2px solid teal;
+            }
+            div.four { 
+                background-color: #7FFFD4;
+                border: 2px solid teal;
+                padding: 20px 50px 30px 50px; 
+            }
+            div.three { 
+                background-color: #7FFFD4;
+                border: 2px solid teal;
+                padding: 20px 50px 30px;
+            }
+        </style>
+        <div class="basic">padding 속성을 설정하지 않은 요소입니다.</div><br>
+        <div class="four">padding 속성값을 4개로 설정한 요소입니다.</div><br>
+        <div class="three">padding 속성값을 3개로 설정한 요소입니다.</div><br>
+        <hr>
+        
+        <h3>마진(Margin)</h3>
+        <style>
+            div.basic {
+                background-color: #7FFFD4;
+                border: 2px solid teal;
+            }
+            div.mar {
+                background-color: #7FFFD4;
+                border: 2px solid teal;
+                margin-top: -25px;
+                margin-right: 10px;
+                margin-bottom: 30px;
+                margin-left: 100px;
+            }
+        </style>
+        <h4>마진(margin) 영역 설정</h4>
+        <div class="basic">아무런 margin 속성값도 설정하지 않은 요소입니다.</div><br>
+        <div class="mar">margin 속성값을 각 측면마다 별도로 지정한 요소입니다.</div>
+        <hr>
+
+        <style>
+            div.basic {
+                background-color: #7FFFD4;
+                border: 2px solid teal;
+            }
+            div.parent {
+                background-color: #7FFFD4;
+                border: 2px solid teal;
+                height: 100px;
+                margin-left: 100px;
+            }
+            div.child {
+                background-color: #FFF8DC;
+                margin-left: inherit;
+            }
+        </style>
+        <h4>margin 속성값 조절</h4>
+        <div class="basic">아무런 margin 속성값도 설정하지 않은 요소입니다.</div><br>
+        <div class="parent">left-margin 속성값을 100px로 설정한 요소입니다.
+            <div class="child">left-margin 속성값을 inherit로 설정한 요소입니다.</div>
+        </div>
+        <hr>
+        
+        <style>
+            div.auto {
+                border: 2px solid teal;
+                width: 350px;
+                margin: auto;
+            }
+        </style>
+        <h4>margin 속성값 auto를 이용한 수평 정렬</h4>
+        <div class="auto">margin 속성값을 auto로 설정한 요소입니다.</div>
+        <hr>
+
+
+        <style>
+            div.basic {
+                background-color: #7FFFD4;
+                border: 2px solid teal;
+            }
+            div.four { 
+                background-color: #7FFFD4;
+                border: 2px solid teal;
+                margin: 20px 50px 30px 50px; 
+            }
+            div.three { 
+                background-color: #7FFFD4;
+                border: 2px solid teal;
+                margin: 20px 50px 30px;
+            }
+        </style>
+        <h4>마진(margin) 영역 설정</h4>
+        <div class="basic">아무런 margin 속성값도 설정하지 않은 요소입니다.</div><br>
+        <div class="four">margin 속성값을 4개로 설정한 요소입니다.</div>
+        <div class="three">margin 속성값을 3개로 설정한 요소입니다.</div>
+        <hr>
+
+        <h3>테두리(border)</h3>
+        <style>
+            .dotted {border-style: dotted;}
+            .dashed {border-style: dashed;}
+            .solid {border-style: solid;}
+            .double {border-style: double;}
+            .groove {border-style: groove;}
+            .ridge {border-style: ridge;}
+            .inset {border-style: inset;}
+            .outset {border-style: outset;}
+            .none {border-style: none;}
+            .hidden {border-style: hidden;}
+            .mix {border-style: solid dashed dotted double;}
+        </style>
+        <h4>border-style 속성을 이용한 테두리의 모양 변경</h4>
+        <p class="dotted">border-style 속성값을 dotted로 한 단락입니다.</p>
+        <p class="dashed">border-style 속성값을 dashed로 한 단락입니다.</p>
+        <p class="solid">border-style 속성값을 solid로 한 단락입니다.</p>
+        <p class="double">border-style 속성값을 double로 한 단락입니다.</p>
+        <p class="groove">border-style 속성값을 groove로 한 단락입니다.</p>
+        <p class="ridge">border-style 속성값을 ridge로 한 단락입니다.</p>
+        <p class="inset">border-style 속성값을 inset으로 한 단락입니다.</p>
+        <p class="outset">border-style 속성값을 outset으로 한 단락입니다.</p>
+        <p class="none">border-style 속성값을 none으로 한 단락입니다.</p>
+        <p class="hidden">border-style 속성값을 hidden으로 한 단락입니다.</p>
+        <p class="mix">border마다 각각의 border-style 속성값을 적용한 단락입니다.</p>
+        <hr>
+
+        
+        <style>
+            .dotted {border-style: dotted;}
+            .dashed {border-style: dashed;}
+            .solid {border-style: solid;}
+            .double {border-style: double;}
+            .groove {border-style: groove;}
+            .ridge {border-style: ridge;}
+            .inset {border-style: inset;}
+            .outset {border-style: outset;}
+            .none {border-style: none;}
+            .hidden {border-style: hidden;}
+            .mix {border-style: solid dashed dotted double;}
+        </style>
+        <h4>border-style 속성을 이용한 테두리의 모양 변경</h4>
+        <p class="dotted">border-style 속성값을 dotted로 한 단락입니다.</p>
+        <p class="dashed">border-style 속성값을 dashed로 한 단락입니다.</p>
+        <p class="solid">border-style 속성값을 solid로 한 단락입니다.</p>
+        <p class="double">border-style 속성값을 double로 한 단락입니다.</p>
+        <p class="groove">border-style 속성값을 groove로 한 단락입니다.</p>
+        <p class="ridge">border-style 속성값을 ridge로 한 단락입니다.</p>
+        <p class="inset">border-style 속성값을 inset으로 한 단락입니다.</p>
+        <p class="outset">border-style 속성값을 outset으로 한 단락입니다.</p>
+        <p class="none">border-style 속성값을 none으로 한 단락입니다.</p>
+        <p class="hidden">border-style 속성값을 hidden으로 한 단락입니다.</p>
+        <p class="mix">border마다 각각의 border-style 속성값을 적용한 단락입니다.</p>
+        <hr>
+
+        <style>
+            .red { border-color: red; border-style: solid; border-width: 3px;}
+            .green { border-color: rgb(0,255,0); border-style: solid; border-width: 3px;}
+            .blue { border-color: #0000FF; border-style: solid; border-width: 3px;}
+            .mix { border-color: red green blue maroon; border-style: solid; border-width: 3px;}
+            .color { color: teal; border-style: solid; border-width: 3px;}
+        </style>
+        <h4>border-color 속성을 이용한 테두리의 색상 변경</h4>
+        <p class="red">border-color 속성값을 red로 한 단락입니다.</p>
+        <p class="green">border-color 속성값을 green로 한 단락입니다.</p>
+        <p class="blue">border-color 속성값을 blue로 한 단락입니다.</p>
+        <p class="mix">테두리마다 각각의 border-color 속성값을 적용한 단락입니다.</p>
+        <p class="color">border-color 속성의 속성값을 명시하지 않은 단락입니다.</p>
+        <hr>
+
+        <h3>아웃라인(Outline)</h3>
+        <style>
+            p.dotted {outline-style: dotted; border: 1px solid black; outline-color: red;}
+            p.dashed {outline-style: dashed; border: 1px solid black; outline-color: red;}
+            p.solid {outline-style: solid; border: 1px solid black; outline-color: red;}
+            p.double {outline-style: double; border: 1px solid black; outline-color: red;}
+            p.groove {outline-style: groove; border: 1px solid black; outline-color: red;}
+            p.ridge {outline-style: ridge; border: 1px solid black; outline-color: red;}
+            p.inset {outline-style: inset; border: 1px solid black; outline-color: red;}
+            p.outset {outline-style: outset; border: 1px solid black; outline-color: red;}
+            p.none {outline-style: none; }border: 1px solid black; outline-color: red;
+            p.hidden {outline-style: hidden; border: 1px solid black; outline-color: red;}
+        </style>
+        <h4>outline-style 속성을 이용한 외곽선의 모양 변경</h4>
+        <p class="dotted">outline-style 속성값을 dotted로 한 단락입니다.</p>
+        <p class="dashed">outline-style 속성값을 dashed로 한 단락입니다.</p>
+        <p class="solid">outline-style 속성값을 solid로 한 단락입니다.</p>
+        <p class="double">outline-style 속성값을 double로 한 단락입니다.</p>
+        <p class="groove">outline-style 속성값을 groove로 한 단락입니다.</p>
+        <p class="ridge">outline-style 속성값을 ridge로 한 단락입니다.</p>
+        <p class="inset">outline-style 속성값을 inset으로 한 단락입니다.</p>
+        <p class="outset">outline-style 속성값을 outset으로 한 단락입니다.</p>
+        <p class="none">outline-style 속성값을 none으로 한 단락입니다.</p>
+        <p class="hidden">outline-style 속성값을 hidden으로 한 단락입니다.</p>
+        <hr>
+
+        <style>
+            p.solidA {
+                outline-style: solid;
+                outline-color: violet;
+                outline-width: 2px;
+                border: 1px solid black; 
+            }
+            p.solidB {
+                outline-style: solid;
+                outline-color: coral;
+                outline-width: 7px;
+                border: 1px solid black; 
+            }
+            p.dashedA {
+                outline-style: dashed;
+                outline-color: violet;
+                outline-width: thin;
+                border: 1px solid black; 
+            }
+            p.dashedB {
+                outline-style: dashed;
+                outline-color: coral;
+                outline-width: thick;
+                border: 1px solid black; 
+            }
+        </style>
+        <h4>outline-width 속성을 이용한 외곽선의 두께 설정</h4>
+        <p class="solidA">outline-width 속성값을 2px로 한 단락입니다.</p>
+        <p class="solidB">outline-width 속성값을 5px로 한 단락입니다.</p>
+        <p class="dashedA">outline-width 속성값을 thin으로 한 단락입니다.</p>
+        <p class="dashedB">outline-width 속성값을 thick으로 한 단락입니다.</p>
+        <hr>
+
+        <style>
+            p.red { outline-color: red; border: 1px solid black;outline-style: dashed;}
+            p.green { outline-color: rgb(0,255,0);border: 1px solid black;outline-style: dashed;}
+            p.blue { outline-color: #0000FF; border: 1px solid black;outline-style: dashed;}
+            p.invert { outline-color: invert; border: 1px solid black;outline-style: dashed;}
+        </style>
+        <h4>outline-color 속성을 이용한 외곽선의 색상 변경</h4>
+        <p class="red">outline-color 속성값을 red로 한 단락입니다.</p>
+        <p class="green">outline-color 속성값을 green로 한 단락입니다.</p>
+        <p class="blue">outline-color 속성값을 blue로 한 단락입니다.</p>
+        <p class="invert">outline-color 속성값을 invert로 한 단락입니다.</p>
+        <hr>
+
+        <style>
+            p.none { border-style: none; }
+            p.good { outline: 3px solid teal; border: 1px solid black; }
+            p.wrong { outline: 5px teal; border: 1px solid black; }
+        </style>
+        <h4>외곽선의 스타일 변경</h4>
+        <p class="good">outline-style 속성을 설정한 단락입니다.</p>
+        <p class="wrong">outline-style 속성을 설정하지 않은 단락입니다.</p>
+        <p class="none">외곽선의 축약 표현시에는 반드시 outline-style 속성이 먼저 설정되어 있어야 제대로 표현됩니다!</p>
+    </div>
+
+    <div class="group">
+        <h3>디스플레이</h3>
+        <hr>
+
+        <style>
+            li.display { display: inline; }
+        </style>
+        <h4>display 속성의 기본 설정값 변경</h4>
+        <ul class="circle">
+            <li class="display"><a href="/html/intro">HTML</a></li>
+            <li class="display"><a href="/css/intro">CSS</a></li>
+            <li class="display"><a href="/javascript/intro">자바스크립트</a></li>
+        </ul>
+        <hr>
+
+        <style>
+            .first { background-color: aqua; width: 100px; height: 50px; }
+            .second { background-color: green; width: 100px; height: 50px; }
+            .third { background-color: yellow; width: 100px; height: 50px; }
+    
+            .inline { display: inline; }
+            .inline-block { display: inline-block; }
+        </style>
+        <h4>다양한 display 속성값</h4>
+
+        <p>아래에 나오는 div 요소는 모두 display 속성값이 블록입니다.</p>
+        <div class="first">블록</div>
+        <div class="second">블록</div>
+        <div class="third">블록</div><br>
+    
+        <p>아래에 나오는 div 요소는 모두 display 속성값이 인라인입니다.</p>
+        <div class="first inline">인라인</div>
+        <div class="second inline">인라인</div>
+        <div class="third inline">인라인</div><br><br>
+    
+        <p>아래에 나오는 div 요소는 모두 display 속성값이 인라인-블록입니다.</p>
+        <div class="first inline-block">인라인-블록</div>
+        <div class="second inline-block">인라인-블록</div>
+        <div class="third inline-block">인라인-블록</div>
+        <hr>
+
+        <style>
+            div.basic {
+                background-color: ivory;
+                border: 2px solid black;
+            }
+            p.none { display: none; }
+            p.hidden { visibility: hidden; }
+        </style>
+
+        <h4>HTML 요소의 숨기기</h4>
+        <div class="basic">
+            <p>이 아래의 단락은 display 속성값을 none으로 설정했습니다</p>
+            <p class="none">이 단락은 display 속성값을 none으로 설정했습니다.</p>
+        </div><br>
+        <div class="basic">
+            <p>이 아래의 단락은 visibility 속성값을 hidden으로 설정했습니다.</p>
+            <p class="hidden">이 단락은 visibility 속성값을 hidden으로 설정했습니다.</p>
+        </div>
+        <p>visibility 속성값을 hidden으로 설정하면 눈에 보이지만 않을 뿐 여전히 웹 페이지 내에 존재하게 됩니다!</p>
+        <hr>
+
+        <style>
+            img.opacity {
+                opacity: 0.4;
+                filter: alpha(opacity=40);
+            }
+            img.opacity:hover {
+                opacity: 1.0;
+                filter: alpha(opacity=100);
+            }
+        </style>
+        <h4>이미지 투명화</h4>
+        <img src="./img/img_flower.png" width="350" height="263" alt="flower" class="opacity">
+        <p>opacity 속성값을 조절하면 간단히 이미지를 투명하게 만들 수 있어요!</p>
+        <hr>
+
+        <h3>position 속성</h3>
+        <hr>
+
+        <style>
+            div.positionD {
+                border: 2px solid #CD5C5C;
+                position: static;
+            }
+        </style>
+        <h4>정적 위치(static position) 지정 방식</h4>
+	    <div class="positionD">이 요소는 정적 위치 지정 방식으로 위치를 설정하였습니다.</div>
+	    <p>정적 위치는 단순히 웹 페이지의 흐름에 따라 차례대로 요소들을 위치시키는 방식입니다!</p>
+        <hr>
+
+        <style>
+            div.staticC {
+                border: 2px solid #B8860B;
+                position: static;
+            }
+            div.relativeC {
+                border: 2px solid #CD5C5C;
+                position: relative;
+                left: 30px;
+            }
+        </style>
+        <h4>상대 위치(relative position) 지정 방식</h4>
+        <div class="staticC">이 요소는 정적 위치 지정 방식으로 위치를 설정하였습니다.</div><br>
+        <div class="relativeC">이 요소는 상대 위치 지정 방식으로 위치를 설정한 후, left 속성값을 30px로 설정하였습니다.</div><br>
+        <p>상대 위치는 해당 HTML 요소의 정적 위치(static position)에 따라 위치를 재조정하는 방식입니다!</p>    
+        <hr>
+
+        <style>
+            div.relativeFixed {
+                border: 2px solid #B8860B;
+                width: 450px;
+                position: fixed;
+                top: 0;
+                right: 0;
+            }
+        </style>
+        <h4>고정 위치(fixed position) 지정 방식</h4>
+        <div class="relativeFixed">이 요소는 고정 위치 지정 방식으로 위치를 설정하였습니다.</div>
+        <h2>제목 1</h2>
+        <p>첫 번째 단락</p>
+
+        <h2>제목 2</h2>
+        <p>두 번째 단락</p>
+
+        <h2>제목 3</h2>
+        <p>세 번째 단락</p>
+
+        <h2>제목 4</h2>
+        <p>네 번째 단락</p>
+
+        <h2>제목 5</h2>
+        <p>다섯 번째 단락</p>
+
+        <h2>제목 6</h2>
+        <p>여섯 번째 단락</p>
+
+        <h2>제목 7</h2>
+        <p>일곱 번째 단락</p>
+
+        <h2>제목 8</h2>
+        <p>여덟 번째 단락</p>
+
+        <h2>제목 9</h2>
+        <p>아홉 번째 단락</p>
+
+        <h2>제목 10</h2>
+        <p>열 번째 단락</p>
+
+        <h2>제목 11</h2>
+        <p>열한 번째 단락</p>
+
+        <h2>제목 12</h2>
+        <p>열두 번째 단락</p>
+
+        <h2>제목 13</h2>
+        <p>열세 번째 단락</p>
+        <hr>
+
+        <style>
+            div.relativePosition {
+                border: 2px solid #B8860B;
+                width: 500px;
+                height: 200px;
+                position: relative;
+            } 
+            div.absolutePosition  {
+                border: 2px solid #006400;
+                width: 200px;
+                height: 100px;
+                position: absolute;
+                top: 50px;
+                right: 0;
+            }
+        </style>
+        <h4>절대 위치(absolute position) 지정 방식</h4>
+        <div class="relativePosition">이 요소는 상대 위치 지정 방식으로 위치를 설정하였습니다.
+            <div class="absolutePosition">이 요소는 절대 위치 지정 방식으로 위치를 설정한 후, top 속성값을 50px로 설정하였습니다.</div>
+        </div>
+        <div class="absolutePosition">이 요소는 절대 위치 지정 방식으로 위치를 설정한 후, top 속성값을 50px로 설정하였습니다.</div>
+        <p>절대 위치는 해당 요소의 바로 상위의 위치가 설정된 조상(ancestor) 요소에 따라 위치를 재조정하는 방식입니다!</p>
+        <hr>
+
+        <style>
+            .container {
+                border: 3px solid red;
+                width: 100%;
+                height: 500px;
+                position: relative;
+            }
+            .PositionA {
+                width: 150px;
+                height: 50px;
+                top: 100px;
+                left: 120px;
+            }
+            .staticA {
+                border: 3px solid black;
+                position: static;
+            }
+            .relativeA {
+                border: 3px solid green;
+                position: relative;
+            }
+            .fixedA {
+                border: 3px solid orange;
+                position: fixed;
+            }
+            .absoluteA {
+                border: 3px solid blue;
+                position: absolute;
+            }
+        </style>
+        <h4>정적 위치(static position) 지정 방식의 특징</h4>
+        <div class="container">
+            <div class="staticA PositionA">정적 위치(static position)</div>
+            <div class="relativeA PositionA">상대 위치(relative position)</div>
+            <div class="fixedA PositionA">고정 위치(fixed position)</div>
+            <div class="absoluteA PositionA">절대 위치(absolute position)</div>
+        </div>
+        <hr>
+
+        <style>
+            .indexPosition {
+                width: 180px;
+                height: 50px;
+            }
+            .staticB {
+                background-color: lightblue;
+                position: static;
+            }
+            .firstB {
+                background-color: orange;
+                position: fixed;
+                top: 90px;
+                left: 120px;
+                border: none;
+                
+            }
+            .lastB {
+                background-color: orange;
+                position: fixed;
+                top: 180px;
+                left: 120px;
+                z-index: -1;
+                border: none;
+            }
+        </style>
+        <h4>z-index 속성을 이용한 노출 순서 변경</h4>
+        <div>
+            <div class="staticB indexPosition">정적 위치(static position)</div>
+            <div class="firstB indexPosition">고정 위치(fixed position)</div>
+        </div>
+        <br><br>
+        <div>
+            <div class="staticB indexPosition">정적 위치(static position)</div>
+            <div class="lastB indexPosition">고정 위치(fixed position)</div>
+        </div>
+        <hr>
+
+        <h3>float 속성</h3>
+        <hr>
+        <style>
+            img {
+                float: left;
+                margin-right: 20px;
+            }
+        </style>
+        <h4>float 속성을 이용한 위치 설정</h4>
+        <p><img src="./img/img_flower.png" alt="flower" width="245" height="185">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam ornare sapien suscipit tincidunt ullamcorper. Cras ac sem sed mauris maximus rhoncus vel in metus. Nam pharetra arcu sit amet dolor interdum, eget scelerisque libero finibus. Phasellus quis vulputate ante. Fusce sit amet viverra justo. Donec id elementum mauris. Nam id porttitor nisl, et suscipit nunc. Vestibulum sit amet volutpat quam. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Duis placerat sem eu facilisis ultricies.
+            Nulla et elit placerat, malesuada massa sit amet, dictum quam. Duis eu turpis non sapien molestie luctus nec a tortor. Nunc non est eget elit suscipit interdum. Maecenas iaculis lobortis lorem et dignissim. Nullam dapibus, arcu vel malesuada egestas, nisi mi accumsan tellus, at rhoncus dolor nisi in tortor. Donec at aliquam lectus, ac egestas odio. Proin convallis sapien id consectetur egestas. Sed at varius libero, ut ultricies eros. Suspendisse potenti. Vivamus non posuere mauris. Maecenas luctus elementum justo, non tempor nisl blandit id. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        <hr>
+
+        <style>
+            .left {
+                background-color: #FF8C00;
+                width: 150px;
+                height: 50px; 
+                float: left;
+            }
+            .right {
+                background-color: #9932CC;
+                width: 150px;
+                height: 50px; 
+                float: right;
+            }
+        </style>
+        <h4>clear 속성을 이용한 위치 조정</h4>
+        <div>
+            <div class="left">왼쪽 끝에 위치하고 싶은 요소</div>
+            <div class="right">오른쪽 끝에 위치하고 싶은 요소</div>
+        </div>
+        <p>이 글자를 아래쪽에 제대로 출력하고 싶어요!</p>
+        <hr>
+
+        <style>
+            div.overflow {
+                border: 3px solid #73AD21;
+                padding: 5px;
+            }
+            .good img { float: left; }
+            #second { clear: left; }
+            .good { overflow: auto; }
+        </style>
+        <h4>overflow 속성을 이용한 크기 조정</h4>
+        <div class="overflow">이미지와 함께 하고 싶은 내용
+            <img src="./img/img_flower.png" alt="flower" width="245" height="185">
+        </div>
+        <p id="second"><br>overflow 속성값을 auto로 주면 자동으로 컨테이너 요소의 크기도 함께 늘어납니다!</p>
+        <div class="good">이미지와 함께 하고 싶은 내용
+            <img src="./img/img_flower.png" alt="flower" width="245" height="185">
+        </div>
+        <hr>
+
+        <style>
+            div.page {
+                border: 3px solid #CD5C5C;
+                overflow: auto;
+            }
+            h2.title { text-align: center; }
+            header{ border: 3px solid #FFD700; }
+            nav {
+                border: 3px solid #FF1493;
+                width: 150px;
+                float: left;
+            }
+            section {
+                border: 3px solid #00BFFF;
+                margin-left: 156px;
+            }
+            footer{ border: 3px solid #00FA9A; }
+        </style>
+        <h4>float 속성을 이용한 레이아웃</h4>
+        <div class="page">
+            
+            <header>
+                <h2>header 영역</h2>
+            </header>
+            <nav>
+                <h2 class="title">nav 영역</h2>
+                <p>여기에는 보통 메뉴가 들어갑니다.</p>
+            </nav>
+            <section>
+                <h2 class="title">section 영역</h2>
+                <p>여기에는 페이지에 해당하는 내용이 들어갑니다.<br>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam ornare sapien suscipit tincidunt ullamcorper. Cras ac sem sed mauris maximus rhoncus vel in metus. Nam pharetra arcu sit amet dolor interdum, eget scelerisque libero finibus. Phasellus quis vulputate ante. Fusce sit amet viverra justo. Donec id elementum mauris. Nam id porttitor nisl, et suscipit nunc. Vestibulum sit amet volutpat quam. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Duis placerat sem eu facilisis ultricies.
+                </p>
+            </section>
+            <footer>
+                <h2 class="title">footer 영역</h2>
+            </footer>
+        </div>
+        <hr>
+
+        <h3>정렬</h3>
+        <hr>
+
+        <style>
+            div.marginAlign {
+                border: 3px solid #7B68EE;
+                width: 300px;
+                padding: 10px;
+                margin: auto;
+            }
+        </style>
+        <h4>margin 속성을 이용한 가운데 정렬</h4>
+        <div class="marginAlign">margin의 속성값을 auto로 하면,<br>
+        수평으로 가운데 정렬을 할 수 있어요!
+        </div>
+        <hr>
+
+        <style>
+            body {
+                padding: 0;
+                margin: 0;
+            }
+            div.positionAlign {
+                border: 3px solid #4B0082;
+                width: 300px;
+                padding: 10px;
+                margin: 0;
+                position: absolute;
+                right: 0;
+            }
+        </style>
+        <h4>position 속성을 이용한 좌우 정렬</h4>
+        <div class="positionAlign">absolute position을 사용하면,<br>
+        수평으로 좌우 정렬을 할 수 있어요!
+        </div>
+        <hr>
+
+        <style>
+            body {
+                padding: 0;
+                margin: 0;
+            }
+            div.overflow {
+                border: none;
+                overflow: auto;
+            }
+            div.floatAlign {
+                border: 3px solid #4B0082;
+                width: 350px;
+                padding: 10px;
+                margin: 0;
+                background: none;
+            }
+            div.left { float: left }
+            div.right { float: right }
+        </style>
+        <h4>float 속성을 이용한 좌우 정렬</h4>
+        <div class="overflow">
+            <div class="floatAlign left">float 속성값으로 left 또는 right를 사용하면,<br>
+            수평으로 좌우 정렬을 할 수 있어요!
+            </div>
+            <div class="floatAlign right">float 속성값으로 left 또는 right를 사용하면,<br>
+            수평으로 좌우 정렬을 할 수 있어요!
+            </div>
+        </div>
+
+        <div class="group">
+            <h3>미디어쿼리</h3>
+            <hr>
+            <style>
+            @media (max-width:767px){/* 스마트폰 스타일*/}
+            @media screen and (min-width:768px) and (max-width:1023px){/* 태블릿PC 스타일*/ =} 
+            </style>
+        </div>
+    </div>
+</body>
+</html>

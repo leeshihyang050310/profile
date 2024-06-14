@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="./css/sample.css"/>
+    <link rel="stylesheet" href="./css/mobile.css" media="screen and(min-width: 769px)"/>
+    <script  src="http://code.jquery.com/jquery-latest.min.js"></script>
+
+</head>
+<body id="wrap">
+    <h1>스마트문화앱콘텐츠제작</h1>
+    <hr>
+    <h2>HTML기본요소</h2>
+
+    
+    <div class="group">
+        <h3>단락(Paragraph)</h3>
+        <hr>
+        <p>
+            줄을 나누고 싶어서
+            이렇게 줄을 나눠봤습니다.
+                
+            과연    그  대로  출력이    될까요?
+        </p>
+        <hr>
+
+        <p>
+        줄을 나누고 싶어서<br>
+        이렇게 줄을 나눠봤습니다.<br>
+        <br>
+        과연     그대로     출력이     될까요?
+        </p>
+        <hr>
+
+        <pre>
+        줄을 나누고 싶어서
+        이렇게 줄을 나눠봤습니다.
+        
+        과연   그대로    출력이    될까요?
+        </pre>
+    </div>
+
+    
+    <div class="group">
+        <h3>서식(Formatting)</h3>
+        <hr>
+        <h4>강조</h4>
+        <p><b>"이 부분"</b>은 단순히 글씨가 굵은 부분이에요!</p>
+        <p><strong>"이 부분"</strong>은 중요한 부분이라서 굵게 표현됐어요!</p>
+        <p><i>"이 부분"</i>은 단순히 글씨가 이탤릭체인 부분이에요!</p>
+        <p><em>"이 부분"</em>은 중요한 부분이라서 이탤릭체로 표현됐어요!</p>
+        <hr>
+    
+        <h4>하이라이트 효과</h4>
+        <p><mark>"이 부분"</mark>만 하이라이팅하고 싶어요.</p>
+        <hr>
+    
+        <h4>삭제 효과</h4>
+        <p><del>"이 부분"</del>을 지운 것처럼 하고 싶어요.</p>
+        <hr>
+    
+        <h4>삭제효과</h4>
+        <p><ins>"밑줄 친 부분"</ins>에 들어갈 알맞은 말을 고르세요.</p>
+        <hr>
+
+        <h4>위첨자와 아래첨자</h4>
+        <p>X<sup>2</sup> + Y<sup>3</sup> = Z</p>
+        <p>물을 나타내는 화학식은 H<sub>2</sub>O 입니다.</p>
+    </div>
+
+
+    <div class="group">
+    <h3>인용구</h3>
+    <hr>
+        <h4>짧은인용구</h4>
+        <p>HTML의 정의는
+        <q>웹 페이지를 만들기 위한 하이퍼텍스트 마크업 언어</q>
+        입니다.</p>
+        <hr>
+
+        <h4>블럭 인용구</h4>
+        <p>HTML의 정의</p>
+        <blockquote>
+        인터넷 서비스의 하나인 월드 와이드 웹을 통해 볼 수 있는 문서를 만들 때 사용하는 프로그래밍 언어의 한 종류이다.
+        </blockquote>
+        <hr>
+
+        <h4>축약형 표현</h4>
+        <p><strong><abbr title="HyperText Markup Language 5">HTML5</abbr></strong>란 웹 문서를 제작하는 데 쓰이는 프로그래밍 언어인 HTML의 최신규격입니다.</p>
+        <hr>
+
+        <h4>주소 표현</h4>
+        <address>
+            서울특별시<br>
+            강남구 테헤란로
+        </address>
+    </div>
+
+    <div class="group">
+    <h3>스타일(Style)</h3>
+    <hr>
+        <h4>배경색상</h4>
+        <h1 style="background-color:lightgray">style 속성을 이용한 배경색 변경</h1>
+        <hr>
+        <h4>글자색과 크기</h4>
+        <h1 style="color:maroon; font-size:250%">style 속성을 이용한 글자색 변경</h1>
+        <hr>
+        <h4>문단정렬</h4>
+        <h1 style="text-align:center">style 속성을 이용한 문단 정렬 변경</h1>
+    </div>
+
+
+    <div class="group">
+    <h3>색상(color)</h3>
+    <hr>
+        <h4>이름으로 색상정의</h4>
+        <h1 style="color:blue">색상 이름으로 표현된 파란색</h1>
+        <h1 style="color:green">색상 이름으로 표현된 녹색</h1>
+        <h1 style="color:silver">색상 이름으로 표현된 은색</h1>
+        <hr>
+        <h4>RGB로 색상정의</h4>
+        <h1 style="color:rgb(0,0,255)">RGB 색상값으로 표현된 파란색</h1>
+        <h1 style="color:rgb(0,128,0)">RGB 색상값으로 표현된 녹색</h1>
+        <h1 style="color:rgb(192,192,192)">RGB 색상값으로 표현된 은색</h1>
+        <hr>
+
+        <h4>16진수로 색상정의</h4>
+        <h1 style="color:#0000FF">16진수 색상값으로 표현된 파란색</h1>
+        <h1 style="color:#008000">16진수 색상값으로 표현된 녹색</h1>
+        <h1 style="color:#C0C0C0">16진수 색상값으로 표현된 은색</h1>
+    
+    </div>
+    
+    
+    <div class="group">
+    <h3>배경(background)</h3>
+    <hr>
+    </div>
+
+
+    <div class="group">
+    <h3>링크(link)</h3>
+    <hr>  
+        <style>
+        a:link    { color: teal; }
+        a:visited { color: maroon; text-decoration: none }
+        a:hover   { color: yellow; text-decoration: none }
+        a:active  { color: red; text-decoration: none }
+        </style>
+        
+        <a href="/html/intro">
+        <h2>이 링크를 클릭해 보세요!</h2>
+        </a>
+    </div>  
+
+
+    <div class="group">
+    <h3>이미지(image)</h3>
+    <hr>
+    </div>
+
+
+    <div class="group">
+    <h3>리스트(list)</h3>
+    <hr>
+        <h4>순서가 없는 리스트</h4>
+        <ul>
+            <li>사과</li>
+            <li>멜론</li>
+            <li>바나나</li>
+        </ul>
+        <hr>
+        <h4>순서가 있는 리스트</h4>
+        <ol>
+            <li>사과</li>
+            <li>멜론</li>
+            <li>바나나</li>
+        </ol>
+        <hr>
+        <h4>정의리스트</h4>
+        <dl>
+            <dt>호박</dt>
+            <dd>- 박과의 한해살이 덩굴성 채소</dd>
+            <dt>상추</dt>
+            <dd>- 국화과의 한해살이 또는 두해살이풀</dd>
+        </dl>
+    </div>
+
+
+    <div class="group">
+    <h3>테이블(Table)</h3>
+    <hr>
+        <style>
+        table, th, td { border: 1px solid black; border-collapse: collapse }
+        </style>
+        
+        <table tyle="width:100%">
+            <caption>해양 생물</caption>
+            <tr style="background-color:lightgrey">
+                <th>참치</th>
+                <th>고래</th>
+            </tr>
+            <tr>
+                <td>상어</td>
+                <td>문어</td>
+            </tr>
+        </table>
+    </div>  
+    
+
+    <h2>HTML입력요소</h2>
+    <div class="group">
+    <h3>form요소</h3>
+    <hr>
+        <h4>텍스트 입력</h4>
+        <form action="/examples/media/request.php">
+            검색할 내용을 입력하세요 :
+            <input type="text" name="search">
+        </form>
+        <hr>
+        
+        <h4>비밀번호 입력</h4>
+        <form>
+            비밀번호 : <input type="password" name="password">
+        </form>
+        <hr>
+
+        <h4>라디오버튼</h4>
+        <form>
+            <input type="radio" name="lecture" value="html" checked> HTML<br>
+            <input type="radio" name="lecture" value="cpp"> C++
+        </form>
+        <hr>
+
+        <h4>체크박스</h4>
+        <form>
+            <input type="checkbox" name="lecture" value="html" checked> HTML <br>
+            <input type="checkbox" name="lecture" value="html"> CSS <br>
+            <input type="checkbox" name="lecture" value="cpp" disabled> C++
+        </form>
+        <hr>
+        
+        <h4>파일선택</h4>
+        <form>
+            <input type="file" name="upload_file" accept="image/*">
+        </form>
+        <hr>
+            
+        <h4>선택입력</h4>
+        <select name="fruit">
+            <option value="apple"> 사과
+            <option value="orange" selected> 귤
+            <option value="strawberry"> 딸기
+            <option value="peach"> 복숭아
+        </select>
+        <hr>
+
+        <h4>문장입력</h4>
+        <textarea name="message" rows="5" cols="50">여기에 적으세요.</textarea>
+        <hr>
+
+        <h4>버튼</h4> 
+        <button type="button"onclick ="alert('버튼을 클릭하셨군요!')">버튼을 눌러주세요.</button>
+        <hr>
+
+        <h4>전송버튼</h4>
+        <form action="/examples/media/request.php">
+            <input type="submit" value="전송">
+        </form>
+        <hr>
+
+
+        <h4>필드셋</h4>
+        <form action="/examples/media/request.php">
+            <fieldset>
+                <legend>입력 양식</legend>이름 : <br>
+                <input type="text" name="username"><br>이메일 : <br>
+                <input type="text" name="email"><br><br>
+                <input type="submit" value="전송">
+            </fieldset>
+        </form>
+        <hr>   
+
+        <h4>input요소의 속성</h4>
+        <form>
+        이름 : <br><input type="text" name="student_name"><br>
+        학번 : <br><input type="text" name="student_id"><br>
+        학과 : <br><input type="text" name="department" value="웹미디어콘텐츠과"><br>
+        </form>
+    </div>
+
+    <div class="group">
+        <h3>input요소의 속성</h3>
+        <hr>
+    </div>
+
+    <h2>HTML공간분할</h2>
+    <div class="group">
+    <h3>블록(block)타입의 요소</h3>
+        <hr>
+        <p style="border: 3px solid red">
+            p요소는 display 속성값이 블록인 요소입니다.
+        </p>
+
+        <h4>div요소</h4>
+        <div style="background-color:lightgrey; color:green; text-align:center">
+            <h1>div요소를 이용한 스타일 적용</h1>
+            <p>이렇게 div요소로 여러 요소들을 묶은 다음에 style 속성과 클래스 등을 이용하여
+            한 번에 스타일을 적용할 수 있습니다.</p>
+        </div>
+        <hr>   
+    </div>
+
+    <div class="group">
+        <h3>인라인(inline) 타입의 요소</h3>
+        <hr>
+        <p>
+            <span style="background-color:grey; color:orange">span태그</span>는 display 속성값이 인라인 요소
+        </p>
+            
+
+        <h4>span 요소</h4>
+        <p>이렇게
+            <span style="border: 3px solid red">span요소로 텍스트의 일부분</span>만을 따로 묶은 후에 스타일을 적용할 수 있습니다.
+        </p>
+            
+        <hr>   
+    </div>
+
+    <div class="group">
+        <h3>레이아웃(layout)</h3>
+        <hr>
+
+        <h4>div 요소를 이용한 레이아웃</h4>
+        <style>
+            #header {
+                background-color:lightgrey;
+                height:100px;
+            }
+            #nav {
+                background-color:#339999;
+                color:white;
+                width:200px;
+                height:300px;
+                float:left;
+            }
+            #section {
+                width:200px;
+                text-align:left;
+                float:left;
+                padding:10px;
+            }
+            #footer {
+                background-color:#FFCC00;
+                height:100px;
+                clear:both;
+            }
+            #header, #nav, #section, #footer { text-align:center; }
+            #header, #footer { line-height:100px; }
+            #nav, #section { line-height:240px; }
+        </style>
+        <div id="header"><h2>Header 영역</h2></div>
+        <div id="nav"><h2>Nav 영역</h2></div>
+        <div id="section"><p>Section 영역</p></div>
+        <div id="footer"><h2>Footer 영역</h2></div>
+        <hr>
+
+        <h4>html5 레이아웃</h4>
+        <style>
+            header {
+                background-color:lightgrey;
+                height:100px;
+            }
+            nav {
+                background-color:#339999;
+                color:white;
+                width:200px;
+                height:300px;
+                float:left;
+            }
+            section {
+                width:200px;
+                text-align:left;
+                float:left;
+                padding:10px;
+            }
+            footer {
+                background-color:#FFCC00;
+                height:100px;
+                clear:both;
+            }
+            header, nav, section, footer { text-align:center; }
+            header, footer { line-height:100px; }
+            nav, section { line-height:240px; }
+        </style>
+        <header><h2>Header 영역</h2></header>
+        <nav><h2>Nav 영역</h2></nav>
+        <section><p>Section 영역</p></section>
+        <footer><h2>Footer 영역</h2></footer>
+        <hr>
+
+        <h4>table 레이아웃</h4>
+
+        <table width="100%" style="text-align:center; border:none">
+            <tr>
+                <td colspan="2" style="background-color:lightgrey"><h2>Header 영역</h2></td>
+            </tr>
+            <tr>
+                <td style="background-color:#339999; color:white; width:20%"><h2>Nav 영역</h2></td>
+                <td style="height:200px; text-align:left"><p>Section 영역</p></td>
+            </tr>
+            <tr>
+                <td colspan="2" style="background-color:#FFCC00"><h2>Footer 영역</h2></td>
+            </tr>
+        </table>
+        <hr>
+    </div>
+
+    <div class="group">
+        <h3>아이프레임(iframe)</h3>
+        <hr>
+        <iframe src="./sub/smaple_p1.html" name="frame_target" style="width:100%; height:100px;"></iframe>
+        <p>
+            <a href="./sub/smaple_p2.html" target="frame_target">다음</a>
+        </p>
+    </div>
+
+    <h2>HTML000</h2>
+    <div class="group">
+        <h4></h4>
+        <hr>
+        
+    </div>
+</body>
+</html>
